@@ -1,0 +1,564 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Peter Aderinto — Frontend & Web Developer specializing in React, Next.js, TypeScript, Shopify Liquid, responsive UI engineering, and pixel-perfect Figma implementation." />
+  <title>Peter Aderinto — Frontend & Web Developer</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@500;600;700;800&display=swap" rel="stylesheet">
+  <script src="https://unpkg.com/lucide@latest"></script>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+
+<body>
+  <div class="preloader" id="preloader">
+    <div class="preloader-inner">
+      <div class="loader-logo">PA</div>
+      <div class="loader-line"><span></span></div>
+      <p>Crafting the experience</p>
+    </div>
+  </div>
+
+  <div class="scroll-progress" id="scrollProgress"></div>
+  <canvas class="particle-canvas" id="particleCanvas"></canvas>
+  <div class="noise"></div>
+  <div class="cursor-glow" id="cursorGlow"></div>
+
+  <header class="navbar">
+    <a class="brand" href="#home" aria-label="Peter Aderinto home">
+      <span class="brand-mark">PA</span>
+      <span>Peter Aderinto</span>
+    </a>
+
+    <nav class="desktop-nav" aria-label="Primary navigation">
+      <a href="#home">Home</a>
+      <a href="#about">About</a>
+      <a href="#projects">Projects</a>
+      <a href="#experience">Experience</a>
+      <a href="#contact">Contact</a>
+    </nav>
+
+    <div class="nav-actions">
+      <a class="resume-link magnetic" href="#" aria-label="Download resume">
+        <i data-lucide="download"></i>
+        Résumé
+      </a>
+      <button class="theme-btn" type="button" aria-label="Toggle theme">
+        <i data-lucide="moon"></i>
+      </button>
+      <button class="menu-btn" id="menuBtn" aria-label="Open navigation">
+        <i data-lucide="menu"></i>
+      </button>
+    </div>
+  </header>
+
+  <div class="mobile-menu" id="mobileMenu">
+    <a href="#home">Home</a>
+    <a href="#about">About</a>
+    <a href="#projects">Projects</a>
+    <a href="#experience">Experience</a>
+    <a href="#contact">Contact</a>
+    <a class="mobile-resume-link" href="#"><i data-lucide="download"></i> Download Résumé</a>
+  </div>
+
+  <main>
+    <!-- HERO -->
+    <section class="hero section" id="home">
+      <div class="orb orb-one"></div>
+      <div class="orb orb-two"></div>
+
+      <div class="hero-particles" aria-hidden="true">
+        <span></span><span></span><span></span><span></span><span></span>
+        <span></span><span></span><span></span><span></span><span></span>
+      </div>
+
+      <div class="hero-copy reveal">
+        <div class="availability">
+          <span class="pulse"></span>
+          Available for frontend projects
+        </div>
+
+        <p class="eyebrow">Hi there, I’m Peter Aderinto</p>
+
+        <h1>
+          A Frontend & Web Developer
+          <span>building interactive web experiences.</span>
+        </h1>
+
+        <p class="hero-description">
+          I turn Figma designs into responsive React and Next.js interfaces,
+          build custom Shopify features with Liquid, and write clean frontend code.
+        </p>
+
+        <div class="hero-buttons">
+          <a class="btn btn-primary magnetic" href="#projects">
+            View My Work <i data-lucide="arrow-up-right"></i>
+          </a>
+          <a class="btn btn-secondary magnetic" href="#contact">
+            Contact Me <i data-lucide="send"></i>
+          </a>
+        </div>
+      </div>
+
+      <div class="hero-visual reveal" data-tilt>
+        <div class="code-orbit orbit-code-one"><span>UI</span></div>
+        <div class="code-orbit orbit-code-two"><span>UX</span></div>
+        <div class="code-orbit orbit-code-three"><span>JS</span></div>
+
+        <div class="code-window spotlight-card">
+          <div class="window-bar">
+            <div class="window-dots"><span></span><span></span><span></span></div>
+            <span>peter-portfolio.tsx</span>
+            <i data-lucide="code-2"></i>
+          </div>
+
+          <pre><code><span class="code-purple">const</span> developer = {
+  name: <span class="code-green">"Peter Aderinto"</span>,
+  focus: [
+    <span class="code-green">"Frontend Engineering"</span>,
+    <span class="code-green">"React & Next.js"</span>,
+    <span class="code-green">"Shopify / Liquid"</span>,
+    <span class="code-green">"Figma to Code"</span>
+  ],
+  standard: <span class="code-green">"pixel-perfect"</span>,
+  available: <span class="code-orange">true</span>
+};</code></pre>
+
+          <div class="floating-card card-react">
+            <i data-lucide="atom"></i>
+            <div><strong>React</strong><span>Component-driven UI</span></div>
+          </div>
+
+          <div class="floating-card card-interface">
+            <i data-lucide="panels-top-left"></i>
+            <div><strong>Interface</strong><span>Responsive systems</span></div>
+          </div>
+        </div>
+      </div>
+
+      <div class="hero-skill-strip" aria-label="Core technologies">
+        <div class="hero-skill-track">
+          <span><i data-lucide="code-2"></i> HTML5</span>
+          <span><i data-lucide="braces"></i> CSS3</span>
+          <span><i data-lucide="file-code-2"></i> JavaScript</span>
+          <span><i data-lucide="atom"></i> React</span>
+          <span><i data-lucide="layers-3"></i> Next.js</span>
+          <span><i data-lucide="shopping-bag"></i> Shopify</span>
+          <span><i data-lucide="figma"></i> Figma</span>
+          <span><i data-lucide="git-branch"></i> Git</span>
+          <span><i data-lucide="code-2"></i> HTML5</span>
+          <span><i data-lucide="braces"></i> CSS3</span>
+          <span><i data-lucide="file-code-2"></i> JavaScript</span>
+          <span><i data-lucide="atom"></i> React</span>
+          <span><i data-lucide="layers-3"></i> Next.js</span>
+          <span><i data-lucide="shopping-bag"></i> Shopify</span>
+          <span><i data-lucide="figma"></i> Figma</span>
+          <span><i data-lucide="git-branch"></i> Git</span>
+        </div>
+      </div>
+
+      <div class="scroll-indicator">
+        <span>Scroll</span>
+        <i data-lucide="chevron-down"></i>
+      </div>
+    </section>
+
+    <!-- MARQUEE -->
+    <section class="tech-marquee" aria-label="Technical skills">
+      <div class="marquee-track">
+        <span>HTML5</span><span>CSS3</span><span>JavaScript</span><span>TypeScript</span>
+        <span>React</span><span>Next.js</span><span>Tailwind CSS</span><span>Shopify</span>
+        <span>Liquid</span><span>Bubble.io</span><span>Figma</span><span>Git</span>
+        <span>HTML5</span><span>CSS3</span><span>JavaScript</span><span>TypeScript</span>
+        <span>React</span><span>Next.js</span><span>Tailwind CSS</span><span>Shopify</span>
+        <span>Liquid</span><span>Bubble.io</span><span>Figma</span><span>Git</span>
+      </div>
+    </section>
+
+    <section class="motion-rail" aria-label="Creative frontend capabilities">
+      <div class="motion-rail-track">
+        <span>Responsive Interfaces</span>
+        <span>Micro Interactions</span>
+        <span>Creative Development</span>
+        <span>Motion Design</span>
+        <span>Pixel Precision</span>
+        <span>Responsive Interfaces</span>
+        <span>Micro Interactions</span>
+        <span>Creative Development</span>
+        <span>Motion Design</span>
+        <span>Pixel Precision</span>
+      </div>
+    </section>
+
+    <!-- ABOUT -->
+    <section class="section about framed-section" id="about"><span class="section-frame frame-tl"></span><span class="section-frame frame-br"></span>
+      <div class="section-heading reveal">
+        <p class="eyebrow">About Me</p>
+        <h2>Where scalable components<br>meet pixel-perfect interfaces.</h2>
+      </div>
+
+      <div class="about-grid">
+        <div class="portrait-wrap reveal">
+          <div class="portrait-placeholder">
+            <div class="portrait-initials">PA</div>
+            <p>Add your portrait here</p>
+          </div>
+          <div class="stat-card stat-top">
+            <strong>Pixel-perfect</strong>
+            <span>Figma implementation</span>
+          </div>
+          <div class="stat-card stat-bottom">
+            <strong>Frontend systems</strong>
+            <span>React, Next.js & Shopify</span>
+          </div>
+        </div>
+
+        <div class="about-copy reveal">
+          <h3>I engineer responsive interfaces with structure, precision and design fidelity.</h3>
+          <p>
+            I’m Peter Aderinto, a frontend and web developer focused on component architecture,
+            responsive design systems and maintainable user interfaces. I build production-ready
+            experiences with React, Next.js, TypeScript and modern CSS, while developing and
+            customizing Shopify storefronts with Liquid.
+          </p>
+          <p>
+            My Figma proficiency helps me interpret layouts, reusable components, spacing,
+            typography and interaction patterns with accuracy. I translate those systems
+            into clean frontend code that preserves design intent across screen sizes,
+            interaction states and real-world content.
+          </p>
+
+          <div class="skills-block">
+            <h4>Skills & Tools</h4>
+            <div class="skill-tags">
+              <span>HTML</span><span>CSS</span><span>JavaScript</span><span>TypeScript</span>
+              <span>React</span><span>Next.js</span><span>Tailwind CSS</span><span>Responsive Design</span>
+              <span>Shopify</span><span>Liquid</span><span>Theme Customization</span><span>Bubble.io</span>
+              <span>Figma</span><span>UI Design</span><span>Git</span><span>Vercel</span>
+            </div>
+          </div>
+
+          <div class="about-stats">
+            <div><strong><span class="counter" data-target="100">0</span>%</strong><span>Responsive web interfaces</span></div>
+            <div><strong><span class="counter" data-target="3">0</span> systems</strong><span>React, Next.js & Shopify</span></div>
+            <div><strong><span class="counter" data-target="1">0</span>:1</strong><span>Design-to-code precision</span></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- PROJECTS -->
+    <section class="section projects framed-section" id="projects"><span class="section-frame frame-tl"></span><span class="section-frame frame-br"></span>
+      <div class="section-heading reveal">
+        <p class="eyebrow">Portfolio</p>
+        <h2>Selected Work</h2>
+        <p class="section-intro">
+          A growing collection of frontend, Shopify and interface-engineering projects
+          built to demonstrate practical problem-solving, component logic and production-quality execution.
+        </p>
+      </div>
+
+      <div class="project-filters reveal" role="group" aria-label="Project filters">
+        <button class="filter-btn magnetic  active" data-filter="all">All</button>
+        <button class="filter-btn magnetic " data-filter="frontend">Frontend</button>
+        <button class="filter-btn magnetic " data-filter="shopify">Shopify</button>
+        <button class="filter-btn magnetic " data-filter="design">UI & Layouts</button>
+        <button class="filter-btn magnetic " data-filter="frontend">Frontend</button>
+      </div>
+
+      <div class="project-grid">
+        <article class="project-card reveal spotlight-card" data-tilt data-category="frontend">
+          <div class="project-image project-rps">
+            <div class="rps-icons"><span>✊</span><span>✋</span><span>✌️</span></div>
+            <div class="mini-score"><span>You 04</span><span>CPU 03</span></div>
+          </div>
+          <div class="project-content">
+            <div class="project-topline"><div class="project-type">Interactive Game</div><span class="live-dot">Concept Build</span></div>
+            <h3>Rock Paper Scissors</h3>
+            <p>An interactive browser game engineered with clear state transitions, reusable game logic, responsive controls and persistent score management.</p>
+            <div class="project-footer">
+              <div class="project-tags"><span>HTML</span><span>CSS</span><span>JavaScript</span></div>
+              <a href="#" aria-label="View Rock Paper Scissors project"><i data-lucide="arrow-up-right"></i></a>
+            </div>
+          </div>
+        </article>
+
+        <article class="project-card reveal spotlight-card" data-tilt data-category="frontend">
+          <div class="project-image project-dashboard">
+            <div class="dash-sidebar"></div>
+            <div class="dash-main">
+              <div class="dash-row"></div>
+              <div class="dash-panels"><span></span><span></span><span></span></div>
+              <div class="dash-chart"></div>
+            </div>
+          </div>
+          <div class="project-content">
+            <div class="project-topline"><div class="project-type">Frontend Application</div><span class="live-dot">Planned</span></div>
+            <h3>TaskFlow Dashboard</h3>
+            <p>A responsive productivity dashboard built with reusable React components, typed data structures, state-driven filtering and modular UI patterns.</p>
+            <div class="project-footer">
+              <div class="project-tags"><span>React</span><span>TypeScript</span><span>Tailwind</span></div>
+              <a href="#" aria-label="View TaskFlow project"><i data-lucide="arrow-up-right"></i></a>
+            </div>
+          </div>
+        </article>
+
+        <article class="project-card reveal spotlight-card" data-tilt data-category="shopify">
+          <div class="project-image project-store">
+            <div class="store-nav"></div>
+            <div class="store-copy"><span>NEW COLLECTION</span><strong>Wear your<br>confidence.</strong></div>
+            <div class="store-product"></div>
+          </div>
+          <div class="project-content">
+            <div class="project-topline"><div class="project-type">Shopify Storefront</div><span class="live-dot">Planned</span></div>
+            <h3>Northstar Fashion</h3>
+            <p>A custom Shopify storefront featuring Liquid section development, responsive product templates, configurable theme blocks and refined mobile behavior.</p>
+            <div class="project-footer">
+              <div class="project-tags"><span>Shopify</span><span>Liquid</span><span>CSS</span></div>
+              <a href="#" aria-label="View Northstar Fashion project"><i data-lucide="arrow-up-right"></i></a>
+            </div>
+          </div>
+        </article>
+
+        <article class="project-card reveal spotlight-card" data-tilt data-category="design">
+          <div class="project-image project-booking">
+            <div class="booking-phone">
+              <span class="booking-pill"></span>
+              <strong>Book a session</strong>
+              <div></div><div></div><div></div>
+              <button>Continue</button>
+            </div>
+          </div>
+          <div class="project-content">
+            <div class="project-topline"><div class="project-type">No-Code Application</div><span class="live-dot">Planned</span></div>
+            <h3>Bookly Service App</h3>
+            <p>A workflow-driven web application structured around responsive layouts, reusable interface elements, user authentication and connected application states.</p>
+            <div class="project-footer">
+              <div class="project-tags"><span>Bubble.io</span><span>Workflows</span><span>Database</span></div>
+              <a href="#" aria-label="View Bookly project"><i data-lucide="arrow-up-right"></i></a>
+            </div>
+          </div>
+        </article>
+
+        <article class="project-card reveal spotlight-card" data-tilt data-category="design frontend">
+          <div class="project-image project-saas">
+            <div class="saas-glow"></div>
+            <span class="saas-badge">AI WORKSPACE</span>
+            <strong>Work smarter.<br>Ship faster.</strong>
+            <button>Start building</button>
+          </div>
+          <div class="project-content">
+            <div class="project-topline"><div class="project-type">Figma to Frontend</div><span class="live-dot">Planned</span></div>
+            <h3>Nova AI Landing Page</h3>
+            <p>A Figma-to-code interface built with reusable layout components, responsive spacing rules, accessible interactions and precise visual implementation.</p>
+            <div class="project-footer">
+              <div class="project-tags"><span>Figma</span><span>Next.js</span><span>Motion</span></div>
+              <a href="#" aria-label="View Nova project"><i data-lucide="arrow-up-right"></i></a>
+            </div>
+          </div>
+        </article>
+
+        <article class="project-card reveal spotlight-card" data-tilt data-category="frontend">
+          <div class="project-image project-weather">
+            <div class="weather-card">
+              <span>Lagos, Nigeria</span>
+              <strong>29°</strong>
+              <p>Partly cloudy</p>
+              <div><span>31°</span><span>28°</span><span>27°</span></div>
+            </div>
+          </div>
+          <div class="project-content">
+            <div class="project-topline"><div class="project-type">API Project</div><span class="live-dot">Planned</span></div>
+            <h3>Atmos Weather App</h3>
+            <p>A data-driven weather interface with API integration, asynchronous loading states, reusable forecast components and responsive condition-based layouts.</p>
+            <div class="project-footer">
+              <div class="project-tags"><span>React</span><span>REST API</span><span>CSS</span></div>
+              <a href="#" aria-label="View Atmos project"><i data-lucide="arrow-up-right"></i></a>
+            </div>
+          </div>
+        </article>
+      </div>
+
+      <div class="project-note reveal">
+        <i data-lucide="construction"></i>
+        <div>
+          <strong>Portfolio currently in active development.</strong>
+          <p>These cards provide the final framework for engineering-focused projects you will build and publish. Replace each placeholder with a live demo, source repository and concise technical case study.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- DESIGN SHOWCASE -->
+    <section class="design-showcase">
+      <div class="section showcase-inner">
+        <div class="showcase-copy reveal">
+          <p class="eyebrow">Design & Implementation</p>
+          <h2>From design system<br>to production-ready UI.</h2>
+          <p>
+            I work across the full interface-development process: design interpretation,
+            component architecture, responsive behavior, interaction states, accessibility
+            and accurate implementation in modern frontend frameworks.
+          </p>
+          <a href="#contact" class="text-link">Discuss a design-to-code project <i data-lucide="arrow-up-right"></i></a>
+        </div>
+
+        <div class="showcase-cards reveal">
+          <div class="showcase-card spotlight-card" data-tilt>
+            <span>01</span>
+            <i data-lucide="figma"></i>
+            <strong>Interface Design</strong>
+            <p>Responsive layouts, reusable components, typography, spacing and design-token consistency.</p>
+          </div>
+          <div class="showcase-card spotlight-card" data-tilt>
+            <span>02</span>
+            <i data-lucide="panels-top-left"></i>
+            <strong>Responsive Build</strong>
+            <p>Scalable component implementation across desktop, tablet and mobile breakpoints.</p>
+          </div>
+          <div class="showcase-card spotlight-card" data-tilt>
+            <span>03</span>
+            <i data-lucide="sparkles"></i>
+            <strong>Interaction Polish</strong>
+            <p>Purposeful motion, accessible states, interaction feedback and polished micro-interactions.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- EXPERIENCE -->
+    <section class="section experience framed-section" id="experience"><span class="section-frame frame-tl"></span><span class="section-frame frame-br"></span>
+      <div class="section-heading reveal">
+        <p class="eyebrow">Career</p>
+        <h2>Experience & Education</h2>
+        <p class="section-intro">A flexible timeline ready for your verified professional history, education and certifications.</p>
+      </div>
+
+      <div class="timeline">
+        <article class="timeline-item reveal">
+          <div class="timeline-marker"></div>
+          <div class="timeline-date">Current</div>
+          <div class="timeline-content spotlight-card">
+            <span class="timeline-kind">Professional Experience</span>
+            <h3>Frontend Web Developer</h3>
+            <h4>Freelance / Independent</h4>
+            <p>Engineering responsive websites and reusable interface systems with React, JavaScript and modern CSS, while translating Figma layouts into accurate, maintainable frontend builds.</p>
+            <div class="project-tags"><span>React</span><span>JavaScript</span><span>Shopify</span><span>Figma</span></div>
+          </div>
+        </article>
+
+        <article class="timeline-item reveal">
+          <div class="timeline-marker"></div>
+          <div class="timeline-date">Current</div>
+          <div class="timeline-content spotlight-card">
+            <span class="timeline-kind">Shopify Development</span>
+            <h3>Custom Shopify Developer</h3>
+            <h4>Freelance / Independent Projects</h4>
+            <p>Developing and customizing Shopify themes with Liquid, modular sections, responsive product templates, storefront UI improvements and reusable theme settings.</p>
+            <div class="project-tags"><span>Shopify</span><span>Liquid</span><span>Theme Sections</span><span>Responsive UI</span></div>
+          </div>
+        </article>
+
+        <article class="timeline-item reveal">
+          <div class="timeline-marker"></div>
+          <div class="timeline-date">Add date</div>
+          <div class="timeline-content spotlight-card">
+            <span class="timeline-kind">Education</span>
+            <h3>UI Engineering & Frontend Development</h3>
+            <h4>Education, Courses & Certifications</h4>
+            <p>Use this timeline entry for verified education, frontend certifications and practical training in web development, TypeScript, interface design and software engineering.</p>
+            <div class="project-tags"><span>Frontend Engineering</span><span>TypeScript</span><span>UI Design</span></div>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <!-- CONTACT -->
+    <section class="section contact framed-section" id="contact"><span class="section-frame frame-tl"></span><span class="section-frame frame-br"></span>
+      <div class="contact-panel">
+        <div class="contact-copy reveal">
+          <p class="eyebrow">Contact</p>
+          <h2>Let’s build something<br>worth showing.</h2>
+          <p>
+            Have a frontend project, custom Shopify feature, interface implementation or
+            remote development opportunity in mind? Send me a message and tell me what you are building.
+          </p>
+
+          <div class="contact-details">
+            <a href="mailto:your-email@example.com">
+              <i data-lucide="mail"></i>
+              <div><span>Email</span><strong>your-email@example.com</strong></div>
+            </a>
+            <div>
+              <i data-lucide="map-pin"></i>
+              <div><span>Location</span><strong>Nigeria · Available worldwide</strong></div>
+            </div>
+          </div>
+
+          <div class="socials">
+            <a href="#" aria-label="Twitter"><i data-lucide="twitter"></i></a>
+            <a href="#" aria-label="LinkedIn"><i data-lucide="linkedin"></i></a>
+            <a href="#" aria-label="GitHub"><i data-lucide="github"></i></a>
+          </div>
+
+          <div class="availability-card">
+            <span class="pulse"></span>
+            <div><strong>Available for opportunities</strong><p>Freelance, contract, agency and remote roles.</p></div>
+          </div>
+        </div>
+
+        <form class="contact-form reveal" onsubmit="event.preventDefault(); showFormMessage();">
+          <label>
+            Your Name
+            <input type="text" placeholder="Enter your name" required />
+          </label>
+          <label>
+            Email Address
+            <input type="email" placeholder="you@example.com" required />
+          </label>
+          <label>
+            What do you need help with?
+            <select>
+              <option>Frontend development</option>
+              <option>Shopify development</option>
+              <option>UI engineering or web application</option>
+              <option>Figma to code</option>
+              <option>Job or contract opportunity</option>
+            </select>
+          </label>
+          <label>
+            Message
+            <textarea rows="6" placeholder="Tell me about the project or opportunity..." required></textarea>
+          </label>
+          <button class="btn btn-primary form-button" type="submit">
+            Send Message <i data-lucide="send"></i>
+          </button>
+          <p class="form-message" id="formMessage">Form preview only. Connect this to Formspree, Web3Forms or your preferred backend.</p>
+        </form>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="footer-main">
+      <a class="brand" href="#home">
+        <span class="brand-mark">PA</span>
+        <span>Peter Aderinto</span>
+      </a>
+      <p>Building high-performance, responsive and thoughtfully engineered web experiences.</p>
+      <div class="footer-links">
+        <a href="#about">About</a><a href="#projects">Projects</a>
+        <a href="#experience">Experience</a><a href="#contact">Contact</a>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>Designed & built for Peter Aderinto © 2026</span>
+      <a href="#home">Back to top <i data-lucide="arrow-up"></i></a>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
