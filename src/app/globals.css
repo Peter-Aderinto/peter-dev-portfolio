@@ -239,9 +239,12 @@ img { max-width: 100%; }
 .filter-btn.active, .filter-btn:hover { background: var(--accent); color: #071000; border-color: var(--accent); }
 .project-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 25px; }
 .project-card {
+  position: relative;
   border: 1px solid var(--line); border-radius: 20px; overflow: hidden;
   background: var(--panel); transition: transform .35s, border-color .35s;
 }
+.project-card > .project-destination { position: absolute; inset: 0; z-index: 2; border-radius: inherit; cursor: pointer; }
+.project-card:has(.project-destination:focus-visible) { outline: 3px solid var(--accent); outline-offset: 4px; }
 .project-card:hover { transform: translateY(-7px); border-color: rgba(183,243,74,.32); }
 .project-card.hidden { display: none; }
 .project-image { min-height: 330px; position: relative; overflow: hidden; border-bottom: 1px solid var(--line); }
@@ -1542,4 +1545,39 @@ section,
     width: 100%;
     max-width: 100vw;
   }
+}
+
+/* StorePulse featured project displays the actual embedded dashboard. */
+.project-storepulse { background: #0a0a0a; }
+.project-storepulse img { object-fit: contain; padding: 0; }
+.project-subtitle { color: var(--accent); font-size: .85rem; margin-bottom: 12px; }
+.project-actions { display: flex; align-items: center; gap: 18px; margin-top: 20px; flex-wrap: wrap; }
+.project-actions > span, .project-actions > a { display: inline-flex; align-items: center; gap: 8px; min-height: 44px; font-size: .9rem; font-weight: 700; }
+.project-actions > a { position: relative; z-index: 3; padding: 0 14px; border: 1px solid var(--line); border-radius: 8px; }
+.project-actions > a:focus-visible { outline: 3px solid var(--accent); outline-offset: 3px; }
+.project-card:has(.project-actions) > .project-content { z-index: auto; }
+
+/* Commerce and full-stack positioning; existing visual system preserved. */
+.hero h1 { font-size: clamp(3rem, 4.8vw, 4.9rem) !important; line-height: 1.04 !important; }
+.hero h1 span { font-size: .75em !important; line-height: 1.15 !important; color: var(--accent) !important; -webkit-text-stroke: 0 !important; }
+.hero .availability { font-size: .73rem; }
+.showcase-cards { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+.expertise-groups { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 22px 18px; }
+.expertise-group h5 { font-size: .82rem; color: var(--text); margin-bottom: 9px; }
+.about-copy .expertise-note { font-size: .75rem; line-height: 1.5; margin: -2px 0 10px; }
+.about-stats strong { font-size: 1.3rem; }
+.project-api-preview { min-height: 330px; padding: 38px; display: flex; flex-direction: column; justify-content: center; gap: 20px; }
+.project-api-preview strong { font-family: Manrope, sans-serif; font-size: 1.8rem; }
+.project-api-preview > div { font-size: .9rem; line-height: 1.8; color: var(--text); }
+.project-api-preview > div span { color: var(--accent); padding: 0 5px; }
+.project-api-preview p { color: var(--muted); font-size: .8rem; }
+.project-filters { flex-wrap: wrap; }
+.project-filters button:focus-visible, .hero-buttons a:focus-visible { outline: 3px solid var(--accent); outline-offset: 4px; }
+@media (max-width: 720px) {
+  .hero h1 { font-size: clamp(2.2rem, 10vw, 3.5rem) !important; overflow-wrap: normal; word-break: normal; }
+  .hero h1 span { font-size: .76em !important; overflow-wrap: normal; word-break: normal; }
+  .hero-buttons { flex-wrap: wrap; }
+  .hero-buttons .btn { min-height: 48px; }
+  .expertise-groups, .showcase-cards { grid-template-columns: 1fr; }
+  .project-api-preview { padding: 28px; }
 }

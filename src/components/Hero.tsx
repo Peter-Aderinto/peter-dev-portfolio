@@ -1,8 +1,8 @@
-import { ArrowUpRight, Atom, Braces, ChevronDown, Code2, FileCode2, GitBranch, Layers3, PanelsTopLeft, PenTool, Send, ShoppingBag } from "lucide-react";
+import { ArrowUpRight, Atom, Braces, ChevronDown, Code2, FileCode2, GitBranch, Layers3, Send, ShoppingBag } from "lucide-react";
 
 const skills = [
-  [Code2, "HTML5"], [Braces, "CSS3"], [FileCode2, "JavaScript"], [Atom, "React"],
-  [Layers3, "Next.js"], [ShoppingBag, "Shopify"], [PenTool, "Figma"], [GitBranch, "Git"],
+  [ShoppingBag, "Shopify"], [Code2, "Liquid"], [Atom, "React"], [Layers3, "Next.js"],
+  [FileCode2, "TypeScript"], [Braces, "GraphQL"], [GitBranch, "APIs"],
 ] as const;
 
 export default function Hero() {
@@ -11,22 +11,22 @@ export default function Hero() {
       <div className="orb orb-one" /><div className="orb orb-two" />
       <div className="hero-particles" aria-hidden="true">{Array.from({ length: 10 }, (_, index) => <span key={index} />)}</div>
       <div className="hero-copy reveal">
-        <div className="availability"><span className="pulse" />Available for frontend projects</div>
+        <div className="availability"><span className="pulse" />Available for Shopify & full-stack work</div>
         <p className="eyebrow">Hi there, I’m Peter Aderinto</p>
-        <h1>A Frontend & Web Developer<span>building interactive web experiences.</span></h1>
-        <p className="hero-description">I turn Figma designs into responsive React and Next.js interfaces, build custom Shopify features with Liquid, and write clean frontend code.</p>
+        <h1>Full-Stack Developer<span>&amp; Senior Shopify Developer</span></h1>
+        <p className="hero-description">I build Shopify experiences and full-stack web applications—from custom storefronts and conversion-focused interfaces to backend workflows, APIs and integrations.</p>
         <div className="hero-buttons">
-          <a className="btn btn-primary magnetic" href="#projects">View My Work <ArrowUpRight /></a>
-          <a className="btn btn-secondary magnetic" href="#contact">Contact Me <Send /></a>
+          <a className="btn btn-primary magnetic" href="#projects">Explore My Work <ArrowUpRight /></a>
+          <a className="btn btn-secondary magnetic" href="#contact">Let’s Work Together <Send /></a>
         </div>
       </div>
       <div className="hero-visual reveal" data-tilt>
-        <div className="code-orbit orbit-code-one"><span>UI</span></div><div className="code-orbit orbit-code-two"><span>UX</span></div><div className="code-orbit orbit-code-three"><span>JS</span></div>
+        <div className="code-orbit orbit-code-one"><span>API</span></div><div className="code-orbit orbit-code-two"><span>DB</span></div><div className="code-orbit orbit-code-three"><span>JS</span></div>
         <div className="code-window spotlight-card">
           <div className="window-bar"><div className="window-dots"><span /><span /><span /></div><span>peter-portfolio.tsx</span><Code2 /></div>
-          <pre><code><span className="code-purple">const</span>{` developer = {\n  name: `}<span className="code-green">&quot;Peter Aderinto&quot;</span>{`,\n  focus: [\n    `}<span className="code-green">&quot;Frontend Engineering&quot;</span>{`,\n    `}<span className="code-green">&quot;React & Next.js&quot;</span>{`,\n    `}<span className="code-green">&quot;Shopify / Liquid&quot;</span>{`,\n    `}<span className="code-green">&quot;Figma to Code&quot;</span>{`\n  ],\n  standard: `}<span className="code-green">&quot;pixel-perfect&quot;</span>{`,\n  available: `}<span className="code-orange">true</span>{`\n};`}</code></pre>
-          <div className="floating-card card-react"><Atom /><div><strong>React</strong><span>Component-driven UI</span></div></div>
-          <div className="floating-card card-interface"><PanelsTopLeft /><div><strong>Interface</strong><span>Responsive systems</span></div></div>
+          <pre><code><span className="code-purple">const</span>{` developer = {\n  name: `}<span className="code-green">&quot;Peter Aderinto&quot;</span>{`,\n  focus: [\n    `}<span className="code-green">&quot;Full-Stack Applications&quot;</span>{`,\n    `}<span className="code-green">&quot;Shopify Themes & Apps&quot;</span>{`,\n    `}<span className="code-green">&quot;GraphQL & Webhooks&quot;</span>{`,\n    `}<span className="code-green">&quot;React & Next.js&quot;</span>{`\n  ],\n  standard: `}<span className="code-green">&quot;maintainable&quot;</span>{`,\n  available: `}<span className="code-orange">true</span>{`\n};`}</code></pre>
+          <div className="floating-card card-react"><Atom /><div><strong>Full Stack</strong><span>Interfaces & application logic</span></div></div>
+          <div className="floating-card card-interface"><ShoppingBag /><div><strong>Shopify</strong><span>Themes, apps & integrations</span></div></div>
         </div>
       </div>
       <div className="hero-skill-strip" aria-label="Core technologies"><div className="hero-skill-track">

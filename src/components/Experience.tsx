@@ -18,7 +18,7 @@ const entries: TimelineEntry[] = [
     highlights: [
       "Develop responsive, production-ready web applications from high-fidelity Figma designs using modern frontend technologies.",
       "Build reusable UI components and modular JavaScript architecture to improve maintainability and scalability.",
-      "Designed and implemented a custom product configuration system that simplified the customer purchase journey and improved checkout experience.",
+      "Designed and implemented a custom product configuration system with reusable interface logic and a guided customer purchase journey.",
       "Optimized frontend performance by reducing unnecessary rendering, improving loading speed, and enhancing Core Web Vitals.",
       "Maintain cross-browser compatibility and responsive experiences across multiple screen sizes.",
     ],
@@ -31,7 +31,7 @@ const entries: TimelineEntry[] = [
     subtitle: "Upwork & Fiverr",
     location: "Remote",
     highlights: [
-      "Built and deployed over 150 responsive web interfaces and landing pages using component-based architecture for global e-commerce and SaaS brands.",
+      "Built and deployed responsive websites and landing pages using component-based architecture for e-commerce and SaaS clients.",
       "Integrated third-party services, APIs, analytics tools, and marketing platforms into production websites.",
       "Translated client requirements and business goals into technical solutions, delivering projects on schedule.",
       "Managed multiple projects concurrently using Git and GitHub throughout the development lifecycle.",
@@ -82,8 +82,8 @@ export default function Experience() {
         <p className="eyebrow">Career</p>
         <h2>Experience & Education</h2>
         <p className="section-intro">
-          Three-plus years building responsive web products, e-commerce experiences,
-          and scalable interfaces for businesses and clients across international markets.
+          Approximately five years of relevant development experience across e-commerce,
+          custom web features, API integrations and responsive applications.
         </p>
       </div>
       <div className="timeline">

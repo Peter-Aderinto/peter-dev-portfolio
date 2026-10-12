@@ -1,5 +1,5 @@
-const technologies = ["HTML5", "CSS3", "JavaScript", "TypeScript", "React", "Next.js", "Tailwind CSS", "Shopify", "Liquid", "Bubble.io", "Figma", "Git"];
-const capabilities = ["Responsive Interfaces", "Micro Interactions", "Creative Development", "Motion Design", "Pixel Precision"];
+const technologies = ["Shopify OS 2.0", "Liquid", "TypeScript", "React", "Next.js", "GraphQL", "Webhooks", "Prisma", "REST APIs", "Figma", "Git"];
+const capabilities = ["Shopify Engineering", "Full-Stack Applications", "API Integrations", "E-commerce Experiences", "Responsive Interfaces"];
 
 export default function TechMarquee() {
   return (
@@ -7,7 +7,7 @@ export default function TechMarquee() {
       <section className="tech-marquee" aria-label="Technical skills"><div className="marquee-track">
         {[...technologies, ...technologies].map((item, index) => <span key={`${item}-${index}`}>{item}</span>)}
       </div></section>
-      <section className="motion-rail" aria-label="Creative frontend capabilities"><div className="motion-rail-track">
+      <section className="motion-rail" aria-label="Engineering capabilities"><div className="motion-rail-track">
         {[...capabilities, ...capabilities].map((item, index) => <span key={`${item}-${index}`}>{item}</span>)}
       </div></section>
     </>

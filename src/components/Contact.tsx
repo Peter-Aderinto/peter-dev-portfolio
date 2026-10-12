@@ -34,8 +34,8 @@ export default function Contact() {
       <div className="contact-panel">
         <div className="contact-copy reveal">
           <p className="eyebrow">Contact</p>
-          <h2>Let’s build something<br />worth showing.</h2>
-          <p>Have a frontend project, custom Shopify feature, interface implementation or remote development opportunity in mind? Send me a message and tell me what you are building.</p>
+          <h2>Let’s build something that works<br />as well as it looks.</h2>
+          <p>Need a senior Shopify developer, a full-stack application, or a technical collaborator? I work with Shopify agencies, e-commerce businesses and teams building useful web products. Tell me what you have in mind.</p>
           <div className="contact-details">
             <a href="mailto:petay081@gmail.com"><Mail /><div><span>Email</span><strong>petay081@gmail.com</strong></div></a>
             <div><MapPin /><div><span>Location</span><strong>Nigeria · Available worldwide</strong></div></div>
@@ -49,7 +49,7 @@ export default function Contact() {
           <input className="form-honeypot" type="text" name="_honey" tabIndex={-1} autoComplete="off" aria-hidden="true" />
           <label>Your Name<input type="text" name="name" placeholder="Enter your name" autoComplete="name" required /></label>
           <label>Email Address<input type="email" name="email" placeholder="you@example.com" autoComplete="email" required /></label>
-          <label>What do you need help with?<select name="service" defaultValue="Frontend development"><option>Frontend development</option><option>Shopify development</option><option>UI engineering or web application</option><option>Figma to code</option><option>Job or contract opportunity</option></select></label>
+          <label>What do you need help with?<select name="service" defaultValue="Shopify development"><option>Shopify development</option><option>Full-stack web application</option><option>API integration</option><option>Frontend & UI engineering</option><option>Figma to code</option><option>Job or contract opportunity</option></select></label>
           <label>Message<textarea name="message" rows={6} placeholder="Tell me about the project or opportunity..." required /></label>
           <button className="btn btn-primary form-button" type="submit" disabled={status === "sending"}>
             {status === "sending" ? "Sending..." : "Send Message"} <Send />

@@ -5,7 +5,7 @@ import { useEffect, useState } from "react";
 
 const links = ["Home", "About", "Projects", "Experience", "Contact"];
 
-export default function Navbar() {
+export default function Navbar({ linkPrefix = "" }: { linkPrefix?: string }) {
   const [open, setOpen] = useState(false);
   const [light, setLight] = useState(false);
 
@@ -28,11 +28,11 @@ export default function Navbar() {
   return (
     <>
       <header className="navbar desktop-header">
-        <a className="brand" href="#home" aria-label="Peter Aderinto home">
+        <a className="brand" href={`${linkPrefix}#home`} aria-label="Peter Aderinto home">
           <span className="brand-mark">PA</span><span>Peter Aderinto</span>
         </a>
         <nav className="desktop-nav" aria-label="Primary navigation">
-          {links.map((link) => <a key={link} href={`#${link.toLowerCase()}`}>{link}</a>)}
+          {links.map((link) => <a key={link} href={`${linkPrefix}#${link.toLowerCase()}`}>{link}</a>)}
         </nav>
         <div className="nav-actions">
           <a className="resume-link magnetic" href="/ADERINTO_PETER_OLUWASEUN_RESUME.pdf" download="ADERINTO_PETER_OLUWASEUN_RESUME.pdf" aria-label="Download Peter Aderinto résumé"><Download /> Résumé</a>
@@ -42,7 +42,7 @@ export default function Navbar() {
         </div>
       </header>
       <header className="mobile-header">
-        <a className="mobile-header-brand" href="#home" aria-label="Peter Aderinto home">
+        <a className="mobile-header-brand" href={`${linkPrefix}#home`} aria-label="Peter Aderinto home">
           <span className="brand-mark">PA</span>
           <span>Peter Aderinto</span>
         </a>
@@ -59,13 +59,13 @@ export default function Navbar() {
       <button className={`drawer-backdrop${open ? " open" : ""}`} type="button" aria-label="Close navigation drawer" onClick={() => setOpen(false)} />
       <aside className={`mobile-menu${open ? " open" : ""}`} id="mobile-navigation" aria-hidden={!open}>
         <div className="drawer-heading">
-          <a className="brand" href="#home" onClick={() => setOpen(false)}>
+          <a className="brand" href={`${linkPrefix}#home`} onClick={() => setOpen(false)}>
             <span className="brand-mark">PA</span><span>Peter Aderinto</span>
           </a>
           <button className="drawer-close" type="button" aria-label="Close navigation drawer" onClick={() => setOpen(false)}><X /></button>
         </div>
         <nav aria-label="Mobile navigation">
-          {links.map((link, index) => <a key={link} href={`#${link.toLowerCase()}`} onClick={() => setOpen(false)}><span>0{index + 1}</span>{link}</a>)}
+          {links.map((link, index) => <a key={link} href={`${linkPrefix}#${link.toLowerCase()}`} onClick={() => setOpen(false)}><span>0{index + 1}</span>{link}</a>)}
         </nav>
         <a className="mobile-resume-link" href="/ADERINTO_PETER_OLUWASEUN_RESUME.pdf" download="ADERINTO_PETER_OLUWASEUN_RESUME.pdf" onClick={() => setOpen(false)}><Download /> Download Resume</a>
       </aside>
