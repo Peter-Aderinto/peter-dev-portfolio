@@ -35,7 +35,7 @@ export default function Navbar({ linkPrefix = "" }: { linkPrefix?: string }) {
           {links.map((link) => <a key={link} href={`${linkPrefix}#${link.toLowerCase()}`}>{link}</a>)}
         </nav>
         <div className="nav-actions">
-          <a className="resume-link magnetic" href="/ADERINTO_PETER_OLUWASEUN_RESUME.pdf" download="ADERINTO_PETER_OLUWASEUN_RESUME.pdf" aria-label="Download Peter Aderinto résumé"><Download /> Résumé</a>
+          <a className="resume-link magnetic" href="/Peter_Aderinto_Updated_CV.pdf" download="Peter_Aderinto_Updated_CV.pdf" aria-label="Download Peter Aderinto résumé"><Download /> Résumé</a>
           <button className="theme-btn" type="button" aria-label="Toggle theme" onClick={() => setLight((value) => !value)}>
             {light ? <Sun /> : <Moon />}
           </button>
@@ -47,7 +47,7 @@ export default function Navbar({ linkPrefix = "" }: { linkPrefix?: string }) {
           <span>Peter Aderinto</span>
         </a>
         <div className="mobile-header-actions">
-          <a className="mobile-header-resume" href="/ADERINTO_PETER_OLUWASEUN_RESUME.pdf" download="ADERINTO_PETER_OLUWASEUN_RESUME.pdf" aria-label="Download Peter Aderinto résumé">
+          <a className="mobile-header-resume" href="/Peter_Aderinto_Updated_CV.pdf" download="Peter_Aderinto_Updated_CV.pdf" aria-label="Download Peter Aderinto résumé">
             <Download />
             <span>Résumé</span>
           </a>
@@ -67,7 +67,7 @@ export default function Navbar({ linkPrefix = "" }: { linkPrefix?: string }) {
         <nav aria-label="Mobile navigation">
           {links.map((link, index) => <a key={link} href={`${linkPrefix}#${link.toLowerCase()}`} onClick={() => setOpen(false)}><span>0{index + 1}</span>{link}</a>)}
         </nav>
-        <a className="mobile-resume-link" href="/ADERINTO_PETER_OLUWASEUN_RESUME.pdf" download="ADERINTO_PETER_OLUWASEUN_RESUME.pdf" onClick={() => setOpen(false)}><Download /> Download Resume</a>
+        <a className="mobile-resume-link" href="/Peter_Aderinto_Updated_CV.pdf" download="Peter_Aderinto_Updated_CV.pdf" onClick={() => setOpen(false)}><Download /> Download Resume</a>
       </aside>
     </>
   );

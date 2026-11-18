@@ -14,7 +14,7 @@ export default function About() {
       <div className="about-grid">
         <div className="portrait-wrap reveal">
           <div className="portrait-placeholder">
-            <Image className="portrait-image" src="/peter-aderinto.jpeg" alt="Peter Aderinto wearing a grey suit" fill sizes="(max-width: 980px) 100vw, 40vw" />
+            <Image className="portrait-image" src="/peter_aderinto.jpeg" alt="Portrait of Peter Aderinto" fill sizes="(max-width: 980px) 100vw, 40vw" />
           </div>
           <div className="stat-card stat-top"><strong>Shopify engineering</strong><span>Themes, apps & integrations</span></div>
           <div className="stat-card stat-bottom"><strong>Full-stack development</strong><span>Interfaces, APIs & data</span></div>
